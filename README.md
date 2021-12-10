@@ -1,15 +1,12 @@
 
 <h1 align="center">Bienvenue dans le projet GEM-API 👋</h1>
-<p>
-   <a href="https://drive.google.com/drive/folders/1krxPG_vGvxiRhR2XOCjS0G2nQg5qzMTD" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/ugieiris/sira-reclamations-api/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-</p>
 
-> API de gestion des droits Microstrategy
+Projet informatique pour
+Consultation des nouvelles du GEM / du planning
+Inscription aux activités
+Monitoring de l’activité du GEM
+Publication / Consultation d’avis
+Consultation des règlements
 
 ## Technologies
 
