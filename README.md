@@ -1,12 +1,12 @@
 
 <h1 align="center">Bienvenue dans le projet GEM-API 👋</h1>
 
-Projet informatique pour
-Consultation des nouvelles du GEM / du planning
-Inscription aux activités
-Monitoring de l’activité du GEM
-Publication / Consultation d’avis
-Consultation des règlements
+Projet informatique pour:
+- Consultation des nouvelles du GEM / du planning
+- Inscription aux activités
+- Monitoring de l’activité du GEM
+- Publication / Consultation d’avis
+- Consultation des règlements
 
 ## Technologies
 
