@@ -38,4 +38,3 @@ Configuration RUN IntelliJ conseillée:
 mvn test
 ```
 
-### 🎨 [Git de Logins-microstrat-webapp](https://github.com/ugieiris/logins-microstrat-webapp)
