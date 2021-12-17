@@ -22,6 +22,9 @@ target/
 # ENV
 *.properties
 
+#LOGS
+*.log
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
