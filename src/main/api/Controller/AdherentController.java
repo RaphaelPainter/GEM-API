@@ -4,12 +4,12 @@ import main.api.ApiApplication;
 import main.api.Bean.AdherentBean;
 import main.api.REP.AdherentRepository;
 import main.api.Security.SecurityUtils;
-import main.resources.JsonLabel;
-import main.resources.RolesLabels;
+import main.resources.referentials.ErrorHeaders;
+import main.resources.referentials.JsonLabel;
+import main.resources.referentials.RolesLabels;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -33,8 +33,12 @@ public class AdherentController {
         String login = payload.get(JsonLabel.login).toString();
         String password = payload.get(JsonLabel.password).toString();
         ApiApplication.logger.warn(login);
-        if(!securityUtils.validAuthentification(login, password, RolesLabels.administrator)){
-            return ResponseEntity.status(666).build();
+
+
+        if(!securityUtils.validAuthentification(login, password)){
+            return ResponseEntity.status(666).headers(ErrorHeaders.Auth).build();
+        }else if(!securityUtils.validRole(login, password, RolesLabels.administrator)){
+            return ResponseEntity.status(666).headers(ErrorHeaders.Role).build();
         }else{
             return ResponseEntity.ok(adherentRepository.findAll());
         }

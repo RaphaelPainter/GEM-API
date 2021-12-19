@@ -22,12 +22,16 @@ public class SecurityUtils {
 
     public Boolean validAuthentification(
             final String login,
-            final String password,
-            final Integer role) {
+            final String password) {
         List<AdherentBean> adherents =  adherentRepository.findByLoginAndPassword(login,password);
-        if(adherents.size() != 1){
-            return false;
-        }
+        return adherents.size() == 1;
+    }
+
+    public Boolean validRole(
+            final String login,
+            final String password,
+            final Integer role){
+        List<AdherentBean> adherents =  adherentRepository.findByLoginAndPassword(login,password);
         AdherentBean adherent = adherents.get(0);
         if(adherent.getRole() < role){
             return false;

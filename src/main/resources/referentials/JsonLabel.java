@@ -1,4 +1,4 @@
-package main.resources;
+package main.resources.referentials;
 
 //static constants for identifying JSON attributes
 

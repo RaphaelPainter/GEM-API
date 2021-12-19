@@ -1,4 +1,4 @@
-package main.resources;
+package main.resources.referentials;
 
 public class RolesLabels {
     static public final Integer administrator  = 3;
