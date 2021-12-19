@@ -21,7 +21,7 @@ public class AdherentBean {
     private String date_created;
     private String last_login;
     private String email;
-    
+    private Integer role;
 
     public String getLogin() {
         return login;
@@ -38,6 +38,9 @@ public class AdherentBean {
     public String getLast_login() {
         return last_login;
     }
+    public Integer getRole() {
+        return role;
+    }
 
 
     public AdherentBean setLogin(String login) {
@@ -47,6 +50,11 @@ public class AdherentBean {
 
     public AdherentBean setPassword(String password) {
         this.password = password;
+        return this;
+    }
+
+    public AdherentBean setRole(Integer role) {
+        this.role = role;
         return this;
     }
 

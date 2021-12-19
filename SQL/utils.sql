@@ -5,5 +5,13 @@ commit;
 
 select * from gem_adherent;
 
-INSERT INTO gem_adherent (login, password)
-VALUES ('l','p');
+delete  from gem_adherent;
+
+INSERT INTO gem_adherent (login, password, role)
+VALUES ('user','user',1);
+
+INSERT INTO gem_adherent (login, password, role)
+VALUES ('referent','referent',2);
+
+INSERT INTO gem_adherent (login, password, role)
+VALUES ('admin','admin',3);

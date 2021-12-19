@@ -1,11 +1,14 @@
 package main.api.Security;
 
+import main.api.Bean.AdherentBean;
 import main.api.REP.AdherentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 @Service
 public class SecurityUtils {
@@ -18,9 +21,18 @@ public class SecurityUtils {
     }
 
     public Boolean validAuthentification(
-            @RequestParam("login") final String login,
-            @RequestParam("password") final String password) {
-        return adherentRepository.findByLoginAndPassword(login,password).size() == 1;
+            final String login,
+            final String password,
+            final Integer role) {
+        List<AdherentBean> adherents =  adherentRepository.findByLoginAndPassword(login,password);
+        if(adherents.size() != 1){
+            return false;
+        }
+        AdherentBean adherent = adherents.get(0);
+        if(adherent.getRole() < role){
+            return false;
+        }
+        return true;
     }
 
 }
