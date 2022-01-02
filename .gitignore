@@ -22,6 +22,7 @@ Command workflow
 
 # ENV
 *prod.properties
+*.sql
 
 #LOGS
 *.log
