@@ -21,6 +21,7 @@ target/
 
 # ENV
 *.properties
+src/main/resources/application.properties
 
 #LOGS
 *.log
