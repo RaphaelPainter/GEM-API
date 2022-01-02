@@ -27,7 +27,10 @@ public class AdherentController {
     }
 
     @CrossOrigin(origins = ConstantProperties.webappUrl)
-    @PostMapping("/adherents")
+    @RequestMapping(
+            value = "/adherents",
+            produces = { "application/json", "application/xml" },
+            method = RequestMethod.POST)
     ResponseEntity<List<AdherentBean>> getUsers(
             @RequestBody Map<String, Object> payload) {
         //PARAMS
