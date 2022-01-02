@@ -20,7 +20,6 @@ public class HealthController {
 
 
     HealthController() {
-
     }
 
     @CrossOrigin(origins = ConstantProperties.webappUrl)
