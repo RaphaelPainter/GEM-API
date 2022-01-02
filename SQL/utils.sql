@@ -15,3 +15,5 @@ VALUES ('referent','referent',2);
 
 INSERT INTO gem_adherent (login, password, role)
 VALUES ('admin','admin',3);
+
+

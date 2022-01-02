@@ -21,8 +21,7 @@ Command workflow
 *.ipr
 
 # ENV
-*.properties
-src/main/resources/application.properties
+*prod.properties
 
 #LOGS
 *.log
